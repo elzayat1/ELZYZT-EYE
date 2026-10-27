@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#050816">
+
+    <title>To Ahmed | ELZAYAT-EYE</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- صفحة الدخول الخاصة بأحمد -->
+    <section class="password-screen" id="passwordScreen">
+        <div class="password-card">
+            <div class="password-key">🗝️</div>
+
+            <p class="password-label">A PRIVATE MEMORY</p>
+
+            <h1>لحظة يا شايب ❤️</h1>
+
+            <p class="password-message">
+                قبل ما تدخل وتشوف الذكريات،
+                لازم تثبت إنك صاحب الحكاية.
+                <br>
+                الحكاية دي معمولة مخصوص عشانك يا أحمد.
+            </p>
+
+            <form id="passwordForm">
+                <label for="secretPassword">المفتاح السري</label>
+
+                <input
+                    type="password"
+                    id="secretPassword"
+                    placeholder="اكتب كلمة السر هنا..."
+                    autocomplete="off"
+                    required
+                >
+
+                <button type="submit">افتح الذكريات 🔑</button>
+
+                <p id="passwordError" role="alert"></p>
+            </form>
+
+            <p class="password-footer">
+                SOME MEMORIES ARE ONLY FOR US.
+            </p>
+        </div>
+    </section>
+    <div class="stars"></div>
+    <div class="moon"></div>
+    <div class="ambient-glow"></div>
+
+    <!-- مقدمة الموقع -->
+    <header class="hero">
+
+        <div class="eyebrow">
+            <span class="status-dot"></span>
+            A GIFT MADE WITH LOVE & FRIENDSHIP
+        </div>
+
+        <p class="small-intro">إلى واحد من أغلى الناس ❤️</p>
+
+        <h1>TO AHMED<span>.</span></h1>
+
+        <h2 class="nickname">إلى الشايب بتاعي 😂❤️</h2>
+
+        <p class="hero-description">
+            في ناس بتدخل حياتنا وتسيب فيها ذكريات
+            <br>
+            تستاهل نحتفظ بيها للأبد.
+        </p>
+
+        <a href="#memories" class="memory-button">
+            <span>افتح صندوق الذكريات</span>
+            <span class="button-arrow">↓</span>
+        </a>
+
+        <div class="scroll-hint">
+            <span></span>
+            SCROLL TO DISCOVER
+        </div>
+
+    </header>
+
+    <!-- بداية الذكريات -->
+    <main>
+
+        <section id="memories">
+
+            <div class="section-heading reveal">
+
+                <p class="section-label">TEN MOMENTS · ONE FRIENDSHIP</p>
+
+                <h2>حكايتنا في <span>10 ذكريات</span></h2>
+
+                <p class="section-description">
+                    كل صورة ليها حكاية، وكل حكاية ليها مكان.
+                    ودي شوية لحظات حبيت أجمعهالك يا شايب.
+                </p>
+
+            </div>
+
+            <div class="memory-grid">
+
+                <article class="memory-card reveal">
+                    <div class="memory-image">
+                        <img src="images/memory1.jpeg"
+                             alt="الذكرى الأولى"
+                             loading="lazy">
+                        <span class="image-number">01</span>
+                        <span class="image-heart">✦</span>
+                    </div>
+                    <div class="memory-info">
+                        <p class="memory-category">THE BEGINNING</p>
+                        <h3>أول الحكاية</h3>
+                        <p>كل صداقة ليها بداية، وأجمل حاجة إن الأيام جمعتني بواحد زيك يا أحمد.</p>
+                    </div>
+                </article>
+
+                <article class="memory-card reveal">
+                    <div class="memory-image">
+                        <img src="images/memory2.jpeg"
+                             alt="ذكريات الصداقة"
+                             loading="lazy">
+                        <span class="image-number">02</span>
+                        <span class="image-heart">♡</span>
+                    </div>
+                    <div class="memory-info">
+                        <p class="memory-category">MORE THAN A FRIEND</p>
+                        <h3>مش مجرد صاحب</h3>
+                        <p>في ناس مع الوقت بتبقى أكتر من أصحاب، بتبقى إخوات ومكانتهم بتكبر يوم بعد يوم.</p>
+                    </div>
+                </article>
+
+                <article class="memory-card reveal">
+                    <div class="memory-image">
+                        <img src="images/memory3.jpeg"
+                             alt="لحظات جميلة"
+                             loading="lazy">
+                        <span class="image-number">03</span>
+                        <span class="image-heart">✧</span>
+                    </div>
+                    <div class="memory-info">
+                        <p class="memory-category">LITTLE MOMENTS</p>
+                        <h3>تفاصيل مش بتتنسي</h3>
+                        <p>يمكن وقتها كانت لحظات عادية، بس لما نفتكرها بعدين بنبتسم من قلبنا.</p>
+                    </div>
+                </article>
+
+                <article class="memory-card reveal">
+                    <div class="memory-image">
+                        <img src="images/memory4.jpeg"
+                             alt="التشجيع والدعم"
+                             loading="lazy">
+                        <span class="image-number">04</span>
+                        <span class="image-heart">✦</span>
+                    </div>
+                    <div class="memory-info">
+                        <p class="memory-category">YOU BELIEVED IN ME</p>
+                        <h3>شجعتني أبدأ</h3>
+                        <p>عمري ما هنسى إنك كنت من الناس اللي شجعتني أبدأ مشروعي وأسعى ورا حلمي. ودي لوحدها غالية عندي.</p>
+                    </div>
+                </article>
+
+                <article class="memory-card reveal">
+                    <div class="memory-image">
+                        <img src="images/memory5.jpeg"
+                             alt="الضحك والهزار"
+                             loading="lazy">
+                        <span class="image-number">05</span>
+                        <span class="image-heart">♡</span>
+                    </div>
+                    <div class="memory-info">
+                        <p class="memory-category">LAUGHS & JOKES</p>
+                        <h3>يا عم الشايب 😂</h3>
+                        <p>فيه ضحك وهزار لو اتحكى لحد تاني مش هيفهمه، بس إحنا عارفين الحكاية كويس.</p>
+                    </div>
+                </article>
+
+                <article class="memory-card reveal">
+                    <div class="memory-image">
+                        <img src="images/memory6.jpeg"
+                             alt="مواقف لا تنسى"
+                             loading="lazy">
+                        <span class="image-number">06</span>
+                        <span class="image-heart">✧</span>
+                    </div>
+                    <div class="memory-info">
+                        <p class="memory-category">UNFORGETTABLE</p>
+                        <h3>مواقف بتفضل</h3>
+                        <p>مش كل الذكريات بتتحفظ في الصور؛ فيه مواقف بتفضل محفورة جوانا مهما عدى وقت.</p>
+                    </div>
+                </article>
+
+                <article class="memory-card reveal">
+                    <div class="memory-image">
+                        <img src="images/memory7.jpeg"
+                             alt="الجدعنة والوقفة"
+                             loading="lazy">
+                        <span class="image-number">07</span>
+                        <span class="image-heart">✦</span>
+                    </div>
+                    <div class="memory-info">
+                        <p class="memory-category">REAL FRIENDSHIP</p>
+                        <h3>الجدعنة ليها ناسها</h3>
+                        <p>قيمة الصاحب مش بالكلام الكتير، لكن بالمواقف وبالأثر الحلو اللي بيسيبه في حياتك.</p>
+                    </div>
+                </article>
+
+                <article class="memory-card reveal">
+                    <div class="memory-image">
+                        <img src="images/memory8.jpeg"
+                             alt="ذكريات العمر"
+                             loading="lazy">
+                        <span class="image-number">08</span>
+                        <span class="image-heart">♡</span>
+                    </div>
+                    <div class="memory-info">
+                        <p class="memory-category">MEMORIES FOREVER</p>
+                        <h3>الصورة بتحكي</h3>
+                        <p>كل صورة هنا وراها يوم وحكاية وإحساس. حبيت أجمعهم عشان يفضلوا قريبين مننا.</p>
+                    </div>
+                </article>
+
+                <article class="memory-card reveal">
+                    <div class="memory-image">
+                        <img src="images/memory9.jpeg"
+                             alt="الامتنان للصداقة"
+                             loading="lazy">
+                        <span class="image-number">09</span>
+                        <span class="image-heart">✧</span>
+                    </div>
+                    <div class="memory-info">
+                        <p class="memory-category">THANK YOU, AHMED</p>
+                        <h3>مبسوط إنك صاحبي</h3>
+                        <p>يمكن مش بقولها كل يوم، بس أنا فعلًا مقدّر وجودك وتشجيعك وكل ذكرى حلوة بينا.</p>
+                    </div>
+                </article>
+
+                <article class="memory-card final-card reveal">
+                    <div class="memory-image">
+                        <img src="images/memory10.jpeg"
+                             alt="آخر صورة في صندوق الذكريات"
+                             loading="lazy">
+                        <span class="image-number">10</span>
+                        <span class="image-heart">∞</span>
+                    </div>
+                    <div class="memory-info">
+                        <p class="memory-category">NOT THE END</p>
+                        <h3>لسه في حكايات جاية</h3>
+                        <p>دي مش نهاية الذكريات يا شايب؛ دي مجرد بداية لأيام ومواقف وصور جديدة لسه هنجمعها سوا.</p>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="memory-footer reveal">
+                <span>✦</span>
+                <p>10 صور، حكايات كتير، وصداقة أقدّرها.</p>
+                <span>✦</span>
+            </div>
+
+        </section>
+
+        <!-- الرسالة الأخيرة -->
+        <section class="letter-section reveal" id="letter">
+
+            <div class="letter-card">
+
+                <div class="letter-icon">✉</div>
+
+                <p class="section-label">A LITTLE MESSAGE FOR YOU</p>
+
+                <h2>رسالة إلى <span>الشايب</span></h2>
+
+                <div class="letter-divider">
+                    <span>✦</span>
+                </div>
+
+                <div class="letter-text">
+                    <p>يا شايب، ❤️</p>
+
+                    <p>
+                        يمكن أنا مش بعرف أعبّر بالكلام عن كل حاجة جوايا،
+                        بس حبيت أعملك حاجة تفضل معاك وتفكّرك إنك شخص غالي عندي.
+                    </p>
+
+                    <p>
+                        إنت مش مجرد صاحب بالنسبالي، إنت أخ وصاحب مواقف وذكريات،
+                        وحد من الناس اللي شجّعوني أبدأ وأسعى ورا حاجة نفسي أحققها.
+                    </p>
+
+                    <p>
+                        يمكن الموقع ده مجرد صور وكلام في نظر أي حد،
+                        لكن بالنسبالي كل تفصيلة فيه معمولة مخصوص عشانك،
+                        لأنك تستاهل حاجة حلوة تليق بصداقتنا.
+                    </p>
+
+                    <p>
+                        ومهما الأيام أخدتنا في سكك مختلفة،
+                        أتمنى نفضل دايمًا فاكرين الضحك والمواقف
+                        والحاجات الحلوة اللي عشناها سوا.
+                    </p>
+
+                    <p class="letter-signature">
+                        من صاحبك اللي بيقدّرك يا شايب ❤️
+                        <br>
+                        ربنا يديمك في حياتي يا أحمد.
+                    </p>
+                </div>
+
+                <div class="letter-bottom">
+                    SOME FRIENDSHIPS BECOME FAMILY.
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>ELZAYAT-EYE <span>©</span> 2026</p>
+        <p class="footer-subtitle">MADE FOR AHMED · MADE WITH APPRECIATION</p>
+    </footer>
+
+    <script>
+        // التمرير الناعم إلى الذكريات
+        document.querySelector(".memory-button").addEventListener(
+            "click",
+            function (event) {
+                event.preventDefault();
+
+                document.querySelector("#memories").scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            }
+        );
+        const passwordForm = document.getElementById("passwordForm");
+const passwordScreen = document.getElementById("passwordScreen");
+const secretPassword = document.getElementById("secretPassword");
+const passwordError = document.getElementById("passwordError");
+
+// هنغيّر كلمة السر دي للكلمة اللي هتختارها
+const correctPassword = "ELSHAYP";
+
+passwordForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    if (secretPassword.value === correctPassword) {
+        passwordScreen.style.display = "none";
+    } else {
+        passwordError.textContent = "كلمة السر مش صحيحة، جرّب تاني ❤️";
+        secretPassword.value = "";
+        secretPassword.focus();
+    }
+});
+
+        // إظهار الكروت والرسالة عند الوصول إليها
+        const revealItems = document.querySelectorAll(".reveal");
+
+        if ("IntersectionObserver" in window) {
+            const observer = new IntersectionObserver(
+                function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("visible");
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                },
+                { threshold: 0.12 }
+            );
+
+            revealItems.forEach(function (item) {
+                observer.observe(item);
+            });
+        } else {
+            revealItems.forEach(function (item) {
+                item.classList.add("visible");
+            });
+        }
+
+      // فتح الصورة مع عنوان الذكرى والكلام
+        const photoViewer = document.createElement("div");
+        photoViewer.className = "photo-viewer";
+
+        photoViewer.innerHTML = `
+            <button class="viewer-close" aria-label="إغلاق الصورة">×</button>
+
+            <div class="viewer-content">
+                <img src="" alt="صورة من الذكريات">
+
+                <div class="viewer-info">
+                    <p class="viewer-category"></p>
+                    <h2 class="viewer-title"></h2>
+                    <p class="viewer-description"></p>
+                </div>
+            </div>
+        `;
+
+        document.body.appendChild(photoViewer);
+
+        const viewerImage = photoViewer.querySelector("img");
+        const viewerCategory = photoViewer.querySelector(".viewer-category");
+        const viewerTitle = photoViewer.querySelector(".viewer-title");
+        const viewerDescription = photoViewer.querySelector(".viewer-description");
+
+        document.querySelectorAll(".memory-card").forEach(function (card) {
+            const img = card.querySelector(".memory-image img");
+            const category = card.querySelector(".memory-category");
+            const title = card.querySelector(".memory-info h3");
+            const description = card.querySelector(".memory-info h3 + p");
+
+            img.addEventListener("click", function () {
+                viewerImage.src = img.src;
+                viewerImage.alt = img.alt;
+
+                viewerCategory.textContent = category.textContent;
+                viewerTitle.textContent = title.textContent;
+                viewerDescription.textContent = description.textContent;
+
+                photoViewer.classList.add("active");
+            });
+        });
+
+        function closeViewer() {
+            photoViewer.classList.remove("active");
+        }
+
+        photoViewer.querySelector(".viewer-close").addEventListener(
+            "click",
+            closeViewer
+        );
+
+        photoViewer.addEventListener("click", function (event) {
+            if (event.target === photoViewer) {
+                closeViewer();
+            }
+        });
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                closeViewer();
+            }
+        });
+    </script>
+
+</body>
+</html>

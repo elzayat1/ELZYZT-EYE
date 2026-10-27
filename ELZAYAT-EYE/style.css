@@ -1,0 +1,1136 @@
+/* =========================
+   ELZAYAT-EYE
+   DESIGN FOR AHMED
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 25px;
+}
+
+body {
+    position: relative;
+    isolation: isolate;
+    min-height: 100vh;
+    padding: 30px 22px 0;
+    overflow-x: hidden;
+
+    background: #050816;
+    color: #f5f6ff;
+    font-family: Arial, Tahoma, sans-serif;
+    line-height: 1.7;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -3;
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 5%,
+            rgba(57, 73, 164, 0.25),
+            transparent 50%
+        ),
+        radial-gradient(
+            ellipse at 5% 55%,
+            rgba(76, 43, 145, 0.12),
+            transparent 35%
+        );
+}
+
+.ambient-glow {
+    position: fixed;
+    top: 15%;
+    left: 50%;
+    width: 320px;
+    height: 320px;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background: #435dff;
+    filter: blur(150px);
+    opacity: 0.12;
+    pointer-events: none;
+    z-index: -2;
+}
+
+/* النجوم */
+
+.stars {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    background-image:
+        radial-gradient(2px 2px at 20% 30%, #fff, transparent),
+        radial-gradient(2px 2px at 70% 20%, #fff, transparent),
+        radial-gradient(2px 2px at 40% 80%, #fff, transparent),
+        radial-gradient(2px 2px at 85% 65%, #fff, transparent),
+        radial-gradient(1px 1px at 15% 75%, #fff, transparent),
+        radial-gradient(2px 2px at 55% 45%, #fff, transparent),
+        radial-gradient(1px 1px at 90% 15%, #fff, transparent),
+        radial-gradient(1px 1px at 30% 60%, #fff, transparent);
+
+    background-size: 300px 300px;
+    animation: starsMove 65s linear infinite;
+    opacity: 0.65;
+}
+
+@keyframes starsMove {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 300px 300px;
+    }
+}
+
+/* القمر */
+
+.moon {
+    position: fixed;
+    top: 65px;
+    right: 8%;
+    width: 80px;
+    height: 80px;
+    z-index: -1;
+    pointer-events: none;
+
+    border-radius: 50%;
+    background: #f5f3ce;
+
+    box-shadow:
+        0 0 20px rgba(245, 243, 206, 0.5),
+        0 0 55px rgba(245, 243, 206, 0.2);
+}
+
+.moon::after {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 24px;
+    width: 72px;
+    height: 72px;
+
+    border-radius: 50%;
+    background: #050816;
+}
+
+/* المقدمة */
+
+.hero {
+    position: relative;
+    z-index: 1;
+
+    min-height: 88vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 28px;
+
+    color: #a8b6df;
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    direction: ltr;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    flex-shrink: 0;
+
+    border-radius: 50%;
+    background: #8aa0ff;
+    box-shadow: 0 0 12px #8aa0ff;
+
+    animation: dotPulse 2s ease-in-out infinite;
+}
+
+@keyframes dotPulse {
+    0%, 100% {
+        opacity: 0.45;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.small-intro {
+    margin-bottom: 10px;
+    color: #b9c5f4;
+    font-size: 14px;
+}
+
+.hero h1 {
+    padding: 15px 25px;
+
+    border: 1px solid rgba(128, 151, 255, 0.4);
+    border-radius: 14px;
+
+    color: #a0b0ff;
+    font-size: clamp(31px, 7vw, 60px);
+    letter-spacing: 5px;
+    direction: ltr;
+
+    background: rgba(18, 27, 66, 0.4);
+    box-shadow: 0 0 28px rgba(108, 140, 255, 0.13);
+
+    animation: titleGlow 4s ease-in-out infinite;
+}
+
+.hero h1 span {
+    color: #d7b6ff;
+}
+
+@keyframes titleGlow {
+    0%, 100% {
+        text-shadow: 0 0 10px rgba(108, 140, 255, 0.3);
+        box-shadow: 0 0 20px rgba(108, 140, 255, 0.12);
+    }
+
+    50% {
+        text-shadow: 0 0 25px rgba(108, 140, 255, 0.8);
+        box-shadow: 0 0 35px rgba(108, 140, 255, 0.3);
+    }
+}
+
+.nickname {
+    margin-top: 22px;
+    color: #e1d7ff;
+    font-size: clamp(19px, 4vw, 25px);
+}
+
+.hero-description {
+    margin-top: 18px;
+    color: #aab6d6;
+    font-size: 15px;
+    line-height: 2.1;
+}
+
+/* الزر */
+
+.memory-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    margin-top: 30px;
+    padding: 13px 24px;
+
+    border: 1px solid rgba(133, 153, 255, 0.6);
+    border-radius: 30px;
+
+    background: rgba(108, 140, 255, 0.12);
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+
+    box-shadow: 0 0 22px rgba(108, 140, 255, 0.12);
+
+    transition:
+        background 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+.memory-button:hover {
+    background: rgba(108, 140, 255, 0.28);
+    box-shadow: 0 0 30px rgba(108, 140, 255, 0.35);
+    transform: translateY(-3px);
+}
+
+.button-arrow {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.memory-button:hover .button-arrow {
+    transform: translateY(4px);
+}
+
+.scroll-hint {
+    position: absolute;
+    bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    color: #7583a9;
+    font-size: 9px;
+    letter-spacing: 2.5px;
+    direction: ltr;
+}
+
+.scroll-hint span {
+    width: 1px;
+    height: 35px;
+
+    background: linear-gradient(to bottom, #8aa0ff, transparent);
+    animation: hintMove 2s ease-in-out infinite;
+}
+
+@keyframes hintMove {
+    0%, 100% {
+        opacity: 0.4;
+        transform: scaleY(0.7);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+/* قسم الذكريات */
+
+#memories {
+    position: relative;
+    z-index: 1;
+
+    width: min(100%, 1120px);
+    margin: 20px auto 0;
+    padding: 65px 0 70px;
+
+    scroll-margin-top: 20px;
+}
+
+.section-heading {
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+.section-label {
+    color: #94a5ff;
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    direction: ltr;
+}
+
+.section-heading h2,
+.letter-card h2 {
+    margin-top: 15px;
+    color: #f5f6ff;
+    font-size: clamp(28px, 5vw, 43px);
+}
+
+.section-heading h2 span,
+.letter-card h2 span {
+    color: #9aaaff;
+}
+
+.section-description {
+    max-width: 470px;
+    margin: 14px auto 0;
+
+    color: #9ba8c9;
+    font-size: 14px;
+    line-height: 2;
+}
+
+/* شبكة الكروت */
+
+.memory-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    align-items: stretch;
+    width: 100%;
+}
+.memory-card {
+    min-width: 0;
+    overflow: hidden;
+
+    border: 1px solid rgba(127, 148, 255, 0.19);
+    border-radius: 17px;
+
+    background: linear-gradient(
+        145deg,
+        rgba(20, 29, 64, 0.94),
+        rgba(10, 15, 35, 0.96)
+        width: 85%;
+        margin: 0 auto;
+    );
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+
+    opacity: 0;
+    transform: translateY(25px);
+
+    transition:
+        opacity 0.65s ease,
+        transform 0.45s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.memory-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.memory-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(142, 159, 255, 0.65);
+
+    box-shadow:
+        0 18px 45px rgba(37, 49, 124, 0.22),
+        0 0 20px rgba(108, 140, 255, 0.06);
+}
+
+/* صور الذكريات */
+
+.memory-image {
+    position: relative;
+    height: 245px;
+    overflow: hidden;
+    cursor: zoom-in;
+
+    background: linear-gradient(135deg, #18234d, #30204e);
+}
+
+.memory-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(3, 6, 18, 0.25),
+        transparent 35%,
+        rgba(3, 6, 18, 0.25)
+    );
+}
+
+.memory-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: transform 0.7s ease, filter 0.5s ease;
+}
+
+.memory-card:hover .memory-image img {
+    transform: scale(1.07);
+    filter: brightness(1.08);
+}
+
+.image-number {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    z-index: 2;
+
+    display: grid;
+    place-items: center;
+
+    width: 37px;
+    height: 30px;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 8px;
+
+    background: rgba(5, 8, 22, 0.65);
+    color: #fff;
+    font-size: 11px;
+    letter-spacing: 1px;
+    direction: ltr;
+    backdrop-filter: blur(8px);
+}
+
+.image-heart {
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+    z-index: 2;
+
+    color: #fff;
+    font-size: 30px;
+    text-shadow: 0 0 20px rgba(160, 174, 255, 0.9);
+
+    transition: transform 0.35s ease;
+}
+
+.memory-card:hover .image-heart {
+    transform: scale(1.2) rotate(-8deg);
+}
+
+/* نص الكارت */
+
+.memory-info {
+    padding: 21px 19px 24px;
+    text-align: right;
+}
+
+.memory-category {
+    color: #91a3ff;
+    font-size: 9px;
+    letter-spacing: 1.7px;
+    direction: ltr;
+    text-align: right;
+}
+
+.memory-info h3 {
+    margin-top: 10px;
+    color: #f4f5ff;
+    font-size: 19px;
+    line-height: 1.6;
+}
+
+.memory-info > p:last-child {
+    margin-top: 11px;
+    color: #a5b0cd;
+    font-size: 13px;
+    line-height: 2;
+}
+
+/* الكارت الأخير */
+
+.final-card {
+    border-color: rgba(190, 155, 255, 0.35);
+
+    background: linear-gradient(
+        145deg,
+        rgba(42, 28, 75, 0.85),
+        rgba(12, 17, 42, 0.97)
+    );
+}
+
+.final-card:hover {
+    border-color: rgba(190, 155, 255, 0.8);
+    box-shadow: 0 18px 45px rgba(92, 51, 148, 0.22);
+}
+
+/* نهاية قسم الذكريات */
+
+.memory-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+
+    margin-top: 43px;
+    text-align: center;
+}
+
+.memory-footer span {
+    color: #9aaaff;
+}
+
+.memory-footer p {
+    color: #8f9dbc;
+    font-size: 12px;
+}
+
+/* رسالة أحمد */
+
+.letter-section {
+    position: relative;
+    z-index: 1;
+
+    width: min(100%, 780px);
+    margin: 0 auto;
+    padding: 35px 0 85px;
+}
+
+.letter-card {
+    position: relative;
+    overflow: hidden;
+
+    padding: 40px 35px;
+
+    border: 1px solid rgba(141, 157, 255, 0.3);
+    border-radius: 22px;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(90, 93, 195, 0.16),
+            transparent 50%
+        ),
+        rgba(12, 17, 40, 0.88);
+
+    box-shadow: 0 20px 65px rgba(0, 0, 0, 0.2);
+
+    text-align: center;
+}
+
+.letter-icon {
+    display: grid;
+    place-items: center;
+
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 22px;
+
+    border: 1px solid rgba(153, 166, 255, 0.4);
+    border-radius: 50%;
+
+    color: #b4c0ff;
+    font-size: 27px;
+
+    background: rgba(108, 140, 255, 0.1);
+    box-shadow: 0 0 25px rgba(108, 140, 255, 0.12);
+}
+
+.letter-card h2 {
+    font-size: clamp(26px, 5vw, 37px);
+}
+
+.letter-divider {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    width: 130px;
+    margin: 25px auto;
+    color: #a0afff;
+}
+
+.letter-divider::before,
+.letter-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: rgba(153, 166, 255, 0.35);
+}
+
+.letter-text {
+    color: #c0c9e0;
+    font-size: 14px;
+    line-height: 2.2;
+    text-align: right;
+}
+
+.letter-text p {
+    margin-bottom: 17px;
+}
+
+.letter-signature {
+    margin-top: 28px;
+    padding-top: 22px;
+
+    border-top: 1px solid rgba(153, 166, 255, 0.17);
+
+    color: #e2d8ff;
+    font-weight: bold;
+}
+
+.letter-bottom {
+    margin-top: 28px;
+    color: #8293dc;
+    font-size: 9px;
+    letter-spacing: 2px;
+    direction: ltr;
+}
+
+/* ظهور العناصر أثناء التمرير */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(22px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* عارض الصور */
+
+.photo-viewer {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    background: rgba(2, 4, 14, 0.94);
+    backdrop-filter: blur(12px);
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.photo-viewer.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.photo-viewer img {
+    display: block;
+
+    max-width: 100%;
+    max-height: 85vh;
+
+    object-fit: contain;
+
+    border: 1px solid rgba(160, 174, 255, 0.3);
+    border-radius: 12px;
+
+    box-shadow: 0 0 45px rgba(50, 65, 150, 0.22);
+}
+
+.viewer-close {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+
+    width: 43px;
+    height: 43px;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+
+    background: #151a35;
+    color: white;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+/* الفوتر */
+
+footer {
+    position: relative;
+    z-index: 1;
+
+    width: min(100%, 1120px);
+    margin: 10px auto 0;
+    padding: 24px 0 30px;
+
+    border-top: 1px solid rgba(108, 140, 255, 0.15);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+footer p {
+    color: #9ba8c9;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+footer p span {
+    color: #9aaaff;
+}
+
+footer .footer-subtitle {
+    color: #7180a6;
+    font-size: 9px;
+    direction: ltr;
+}
+
+/* الكمبيوتر والتابلت */
+
+@media (max-width: 900px) {
+    .memory-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .memory-image {
+        height: 230px;
+    }
+}
+
+/* الموبايل */
+
+@media (max-width: 560px) {
+    body {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .hero {
+        min-height: 85vh;
+    }
+
+    .hero h1 {
+        padding: 14px 15px;
+        font-size: 29px;
+        letter-spacing: 3px;
+    }
+
+    .eyebrow {
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+
+    .moon {
+        top: 25px;
+        right: 5%;
+        transform: scale(0.65);
+        transform-origin: top right;
+    }
+
+    #memories {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+    .section-heading {
+        margin-bottom: 30px;
+    }
+
+    .section-description {
+        font-size: 13px;
+    }
+
+    .memory-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .memory-image {
+        height: 260px;
+    }
+
+    .memory-info {
+        padding: 20px;
+    }
+
+    .memory-info h3 {
+        font-size: 18px;
+    }
+
+    .memory-info > p:last-child {
+        font-size: 13px;
+    }
+
+    .letter-section {
+        padding: 20px 0 55px;
+    }
+
+    .letter-card {
+        padding: 30px 20px;
+    }
+
+    .letter-text {
+        font-size: 13px;
+    }
+
+    .memory-footer {
+        gap: 8px;
+    }
+
+    .memory-footer p {
+        font-size: 10px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* تقليل الحركة لمن يفضل ذلك */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+.memory-card img {
+    display: block;
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* عارض الصور مع تفاصيل الذكرى */
+.photo-viewer {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: rgba(3, 5, 18, 0.94);
+    backdrop-filter: blur(12px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    overflow-y: auto;
+}
+
+.photo-viewer.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.viewer-content {
+    width: 100%;
+    max-width: 650px;
+    max-height: 92vh;
+    overflow-y: auto;
+    border: 1px solid rgba(127, 148, 255, 0.3);
+    border-radius: 18px;
+    background: linear-gradient(145deg, #141d40, #0a0f23);
+    box-shadow: 0 0 35px rgba(100, 90, 255, 0.15);
+}
+
+.viewer-content img {
+    display: block;
+    width: 100%;
+    max-height: 65vh;
+    object-fit: contain;
+    background: #050816;
+}
+
+.viewer-info {
+    padding: 24px;
+    text-align: right;
+    color: #f4f5ff;
+}
+
+.viewer-category {
+    margin: 0 0 10px;
+    color: #a99aff;
+    font-size: 12px;
+    letter-spacing: 2px;
+    direction: ltr;
+    text-align: right;
+}
+
+.viewer-title {
+    margin: 0 0 14px;
+    color: #ffffff;
+    font-size: 25px;
+}
+
+.viewer-description {
+    margin: 0;
+    color: #c5cbe3;
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+.viewer-close {
+    position: fixed;
+    top: 18px;
+    left: 20px;
+    z-index: 10000;
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    background: #171d3a;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .photo-viewer {
+        padding: 12px;
+    }
+
+    .viewer-content {
+        max-height: 88vh;
+    }
+
+    .viewer-content img {
+        max-height: 55vh;
+    }
+
+    .viewer-info {
+        padding: 18px;
+    }
+
+    .viewer-title {
+        font-size: 21px;
+    }
+
+    .viewer-description {
+        font-size: 15px;
+    }
+}
+
+/* صفحة الباسورد الخاصة بأحمد */
+.password-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 20000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow-y: auto;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(95, 76, 190, 0.2),
+            transparent 45%
+        ),
+        #050816;
+
+    direction: rtl;
+}
+
+.password-card {
+    width: 100%;
+    max-width: 470px;
+    padding: 35px 28px;
+    text-align: center;
+
+    background: linear-gradient(
+        145deg,
+        #141d40,
+        #0a0f23
+    );
+
+    border: 1px solid rgba(145, 130, 255, 0.35);
+    border-radius: 24px;
+
+    box-shadow:
+        0 0 40px rgba(100, 90, 255, 0.15),
+        inset 0 0 25px rgba(255, 255, 255, 0.02);
+}
+
+.password-key {
+    font-size: 58px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 0 15px rgba(169, 154, 255, 0.5));
+}
+
+.password-label {
+    color: #a99aff;
+    font-size: 12px;
+    letter-spacing: 4px;
+    direction: ltr;
+}
+
+.password-card h1 {
+    color: #ffffff;
+    font-size: 30px;
+    margin: 18px 0;
+}
+
+.password-message {
+    color: #c5cbe3;
+    font-size: 16px;
+    line-height: 2;
+    margin-bottom: 28px;
+}
+
+#passwordForm {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+#passwordForm label {
+    color: #e4e5ff;
+    text-align: right;
+    font-size: 15px;
+}
+
+#secretPassword {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid rgba(169, 154, 255, 0.35);
+    border-radius: 12px;
+    outline: none;
+    background: #080d20;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#secretPassword:focus {
+    border-color: #a99aff;
+    box-shadow: 0 0 15px rgba(169, 154, 255, 0.15);
+}
+
+#secretPassword::placeholder {
+    color: #777f9e;
+}
+
+#passwordForm button {
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #8d7aff, #6252c9);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#passwordForm button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(120, 100, 255, 0.3);
+}
+
+#passwordError {
+    color: #ff8b9a;
+    font-size: 14px;
+    margin: 0;
+}
+
+.password-footer {
+    color: #777f9e;
+    font-size: 10px;
+    letter-spacing: 2px;
+    direction: ltr;
+    margin-top: 28px;
+}
+
+@media (max-width: 480px) {
+    .password-card {
+        padding: 28px 20px;
+    }
+
+    .password-card h1 {
+        font-size: 26px;
+    }
+
+    .password-message {
+        font-size: 15px;
+    }
+}
